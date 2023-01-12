@@ -1,0 +1,17 @@
+<html ng-app="jansemApp">
+<head>
+  ...
+  <script src="lib/angular/angular.js"></script>
+  <script src="app.js"></script>
+</head>
+<body ng-controller="SkillList">
+
+  <ul>
+    <li ng-repeat="skill in skills">
+      <span>{{skill.name}}</span>
+      <p>{{skill.snippet}}</p>
+    </li>
+  </ul>
+
+</body>
+</html>
