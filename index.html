@@ -1,33 +1,30 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-
+<html lang="pt-br" ng-app="myApp">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AutomateDoc</title>
-    <link rel="stylesheet" href="style.css" type="text/css">
-    <link rel="icon" href="/img/Logo AutomaçãoDoc.png" type="image/png">
+    <title>Projeto AngularJS</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
 </head>
-
-<body>
+<body ng-controller="mainController">
     <nav>
-        <img src="/img/Logo AutomaçãoDoc.png"></img>
+        <img src="/img/Logo AutomaçãoDoc.png" alt="Logo AutomaçãoDoc">
         <ul class="menu">
-            <a href="index.html">
-                <li>Home</li>
-            </a>
-            <a href="#">
-                <li>Banca</li>
-            </a>
-            <a href="docente.html">
-                <li>Docente</li>
-            </a>
-            <a href="#">
-                <li>Discente</li>
-            </a>
+            <li><a href="#" ng-click="changePage('home')">Home</a></li>
+            <li><a href="#" ng-click="changePage('banca')">Banca</a></li>
+            <li><a href="#" ng-click="changePage('docente')">Docente</a></li>
+            <li><a href="#" ng-click="changePage('discente')">Discente</a></li>
         </ul>
     </nav>
-</body>
+    <div ng-include="currentPage"></div>
+    <script>
+        var app = angular.module('myApp', []);
+        app.controller('mainController', function($scope) {
+            $scope.currentPage = 'home';
 
+            $scope.changePage = function(page) {
+                $scope.currentPage = page + '.html';
+            };
+        });
+    </script>
+</body>
 </html>
