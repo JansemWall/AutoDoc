@@ -1,6 +1,6 @@
 # Especificações do Projeto
 
-A definição exata do problema e os pontos mais relevantes a serem tratados neste projeto foi consolidada com a participação indireta dos usuários em um trabalho de imersão feita pelo product owner a partir da observação dos usuários e do registro de reclamações e sugestões.  
+A definição exata do problema e os pontos mais relevantes a serem tratados neste projeto foram consolidade através de uma etnográfia do ambiente de trablho do cliente.  
 Os detalhes levantados nesse processo foram consolidados na forma de personas e histórias de usuários.
 
 
